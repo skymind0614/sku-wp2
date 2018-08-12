@@ -1,0 +1,70 @@
+#main_banner {
+  width: 100%;
+  height: 260px;
+}
+
+#main_title {
+  text-align: center;
+  position: absolute;
+  top: 50px;
+}
+
+td {
+  height: 330px;
+  vertical-align: top;
+}
+
+.mid {
+  width: 1000px;
+}
+
+.menu {
+  list-style: none;
+  text-align: center;
+  margin-top: 1px;
+}
+.menu li {
+  display: inline;
+  font-size: 20px;
+  letter-spacing: 7px;
+}
+
+.category {
+  text-align: center;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #002038;
+}
+
+.category:hover {
+  color: #fff;
+  text-shadow: -1px 1px 5px #03c, 1px -1px 5px #03c;
+}
+
+a:active {
+
+}
+
+/*****link style*****/
+@keyframes like_a_TT {
+  16.65% { transform: translateX(8px);  }
+  33.3%  { transform: translateX(-6px); }
+  49.95% { transform: translateX(4px);  }
+  66.6%  { transform: translateX(-2px); }
+  83.25% { transform: translateX(1px);  }
+  100%   { transform: translateX(0);    }
+}
+.footer {
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+.footer:hover {
+  animation-name: like_a_TT;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
