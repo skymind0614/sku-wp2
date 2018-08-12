@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+  <style>
+    #footer {
+       font-size: 14px;
+       letter-spacing: 7px;
+       text-align: center;
+    }
+  </style>
+  <link type="text/css" rel="stylesheet" href="source\\css\\main.css">
+  <link type="text/css" rel="stylesheet" href="source\\css\\font_wrap.css">
+  <script src="source\\javascript\\main.js"></script>
+  <title>main</title>
+</head>
+<body style="margin: 0px; padding: 0px;">
+
+  <!--bgm-->
+  <audio src="source\\audio\\bgm.mp3" autoplay></audio>
+
+  <!--배너 :: iframe을 사용하여 내부 html를 사용하였다.-->
+  <iframe id="main_banner" src="source\\main_banner.html"
+          frameborder="0" scrolling="no"></iframe>
+
+  <!--메인 로고 :: 절대 위치를 사용하여 ifarame layer 위에 나오도록 했다.-->
+  <div id="main_title">
+    <a href="main.html" target="_self">
+      <img src="source\\img\\main_title.png" width=60%>
+    </a>
+  </div>
+
+  <!--메뉴바 :: 네비게이션을 사용하여 메뉴를 inline형식으로 만들었다.-->
+  <ul class="menu">
+    <li id="korean" class="category" onmouseover="sectionChange(this.id)"
+        onmouseout="sectionNormal(this.id);" onclick="sectionClick(this.id);">
+      한 식</li><li> | </li>
+    <li id="snack" class="category" onmouseover="sectionChange(this.id)"
+        onmouseout="sectionNormal(this.id);" onclick="sectionClick(this.id);">
+      분 식</li><li> | </li>
+    <li id="japanese" class="category" onmouseover="sectionChange(this.id)"
+        onmouseout="sectionNormal(this.id);" onclick="sectionClick(this.id);">
+      일 식</li><li> | </li>
+    <li id="box" class="category" onmouseover="sectionChange(this.id)"
+        onmouseout="sectionNormal(this.id);" onclick="sectionClick(this.id);">
+      도 시 락</span></a></li><li> | </li>
+    <li id="fast" class="category" onmouseover="sectionChange(this.id)"
+        onmouseout="sectionNormal(this.id);" onclick="sectionClick(this.id);">
+      패 스 트 푸 드</span></a></li><li> | </li>
+    <li id="delivery" class="category" onmouseover="sectionChange(this.id)"
+        onmouseout="sectionNormal(this.id);" onclick="sectionClick(this.id);">
+      배 달</span></a></li>
+  </ul>
+
+  <!--섹션-->
+  <div id="frame">
+    <table width="100%">
+      <tr>
+        <!--오늘의 추천 메뉴-->
+        <td class="left">
+          <iframe src="source\\section_left.html" id="left" width="100%"
+                  frameborder="0" scrolling="no"></iframe></td>
+
+        <!--main section-->
+        <td class="mid">
+          <iframe src="source\\section_mid.html" id="section" width="100%" height="100%"
+                  frameborder="0" scrolling="no"></iframe></td>
+
+        <!--사다리 게임-->
+        <td class="right" id="right">
+          <img src="source\\img\\radder.png" onclick="popRadder()" width="70%"></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- 사이트맵 링크와 저작권 정보를 표시한다.
+       해당 내용을 inline형식으로 나타냈다.   -->
+  <div id="footer">
+      | Copylight ⓒ
+      <span class="footer" id="jh" onclick="popUp(this.id)">JIHO KIM</span> |
+      <span class="footer" id="sb" onclick="popUp(this.id)">WEB_Programming</span> |
+      <a class="footer" id="sitemap" href="source\\sitemap.html">SITE MAP</a> |
+  </div>
+</body>
+</html>
