@@ -1,0 +1,49 @@
+<head>
+  <link type="text/css" rel="stylesheet" href="css\\font_wrap.css">
+  <style>
+    #recommend {
+      text-align: center;
+    }
+  </style>
+  <script>
+
+  </script>
+</head>
+
+<body>
+  <div id="recommend">추천음식</div>
+  <a id="hyperimg" href="#" target="_top" onclick="imgLink()">
+    <img id=first_img src="img\\jagumsung_thum.png" alt="NO-IMAGE" style="width: 100%; height: 80%">
+  </a>
+
+  <script>
+    var myImage     = document.getElementById("first_img");
+    var imgArr      = ["img\\jagumsung_thum.png","img\\bonggus_thum.png"];
+    var imgLinkArr  = ["http://www.naver.com","https://www.google.co.kr"];
+    var imgIndex    = 0;
+    var IndexTemp;
+
+    function slideShow () {
+      myImage.setAttribute("src",imgArr[imgIndex]);
+      IndexTemp = imgIndex;
+      imgIndex++;
+      if (imgIndex > imgArr.length - 1) {
+        imgIndex=0;
+      }
+    }
+    setInterval(slideShow,1400);
+
+    // 차라리 JSP나 서블릿으로 돌리고 싶다
+    function imgLink () {
+      var x = document.getElementById("hyperimg");
+
+      switch (IndexTemp) {
+        case 1:
+          x.setAttribute("href",imgLinkArr[1]);
+          break;
+        default:
+          x.setAttribute("href",imgLinkArr[0]);
+      }
+    }
+  </script>
+</body>
